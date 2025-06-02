@@ -8,9 +8,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="flex-column">
 
-    <h1>This website is awesome</h1>
+    <div class="background blue">
+        <header class="flex-row">
+            <div id="logo">Header Logo</div>
+            <nav>
+                <ul class="flex-row">
+                    <li><a href="#">header link one</a></li>
+                    <li><a href="#">header link two</a></li>
+                    <li><a href="#">header link three</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="hero" class="flex-row">
+            <div class="text-container">
+                <h1>This website is awesome</h1>
+                <p>
+                    This website has some subtext that goes here under the main title. It's a smaller font and the color
+                    is lower contrast.
+                </p>
+                <button>Sign up</button>
+            </div>
+            <img src="https://www.theodinproject.com/mstile-310x310.png" alt="the odin project logo">
+        </div>
+    </div>
+    <div class="background white">
+        <div id="info">
+            <h2>Some random information</h2>
+        </div>
+    </div>
+    <div class="background grey">
+        <div class="quote">Quote</div>
+    </div>
+    <div class="background white">
+        <div class="cta">Action</div>
+    </div>
+
+    <footer class="background blue">Copyright &copy; The Odin Project 2021</footer>
 
 </body>
 
