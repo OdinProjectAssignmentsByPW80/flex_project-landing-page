@@ -7,7 +7,7 @@
   --action: #3882f6;
   --small: 18px;
   --medium: 24px;
-  --large: 26px;
+  --large: 36px;
   --title: 48px;
 }
 
@@ -147,8 +147,39 @@ nav li {
   color: var(--bright-white);
   border: none;
   width: 120px;
-  height: 30px;
+  height: var(--large);
   border-radius: 6px;
+}
+
+#info {
+  /* ::box-model:: */
+  margin-bottom: 96px;
+}
+
+#info h2 {
+  /* ::typography:: */
+  text-align: center;
+  font-size: var(--large);
+}
+
+#info .card-container {
+  /* ::box-model:: */
+  margin: 0 96px;
+
+  /* ::layout:: */
+  gap: var(--medium);
+}
+
+#info .card .img {
+  /* ::box-model:: */
+  border: solid var(--action) 6px;
+  border-radius: 18px;
+  aspect-ratio: 1 / 1;
+}
+
+#info .card p {
+  /* ::typography:: */
+  text-align: center;
 }
 
 footer {
