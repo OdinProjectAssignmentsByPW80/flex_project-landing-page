@@ -38,15 +38,8 @@ body {
   line-height: calc(1 + 1 / 6);
 
   /* box-model */
-  width: 100vw;
   color: var(--white);
   background-color: var(--blue); /* delete me ? */
-}
-
-body > * {
-  /* box-model */
-  width: 1024px;
-  margin: 0 auto;
 }
 
 /* #region MODULAR TYPOGRAPHY */
@@ -86,6 +79,27 @@ blockquote {
 /* #endregion */
 
 /* #region MODULAR BOX-MODEL */
+.bg {
+  /* box-model */
+  width: 100vw;
+}
+
+.bg > * {
+  /* box-model */
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.bg.white {
+  color: var(--blue);
+  background-color: var(--white);
+}
+
+.bg.grey {
+  color: var(--blue);
+  background-color: var(--grey);
+}
+
 button {
   /* display: block; */
   background-color: var(--action);
@@ -154,6 +168,31 @@ button {
 
 #hero p {
   /* box model */
+  margin-bottom: var(--small);
+}
+/* #endregion */
+
+/* #region INFO */
+#info {
+  /* box model */
+  padding-bottom: 100px;
+}
+
+#info h2 {
+  padding: var(--xx_large) 0;
+}
+
+#info .card-container {
+  gap: var(--xx_large);
+  justify-content: center;
+}
+
+#info .card {
+  width: 161px;
+}
+
+#info .img {
+  aspect-ratio: 1 / 1;
   margin-bottom: var(--small);
 }
 /* #endregion */
