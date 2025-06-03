@@ -109,7 +109,7 @@ button {
 }
 
 .rnd-cor {
-  border-radius: var(--x_small);
+  border-radius: var(--small);
 }
 
 .lrg-vert-pad {
@@ -215,5 +215,18 @@ button {
 
   /* box model */
   margin-right: var(--xx_large);
+}
+/* #endregion */
+
+/* #region ACTION */
+#action .banner {
+  /* box model */
+  background-color: var(--action);
+  color: var(--white);
+  padding: var(--xx_large) 0;
+
+  /* layout */
+  justify-content: space-around;
+  align-items: center;
 }
 /* #endregion */
