@@ -196,3 +196,24 @@ button {
   margin-bottom: var(--small);
 }
 /* #endregion */
+
+/* #region QUOTE */
+#quote {
+  /* box model */
+  padding-left: 100px;
+}
+
+#quote blockquote {
+  /* box model */
+  margin-right: var(--x_large);
+  width: 800px;
+}
+
+#quote .attribution {
+  /* typography */
+  text-align: right;
+
+  /* box model */
+  margin-right: var(--xx_large);
+}
+/* #endregion */
