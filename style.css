@@ -91,7 +91,7 @@ button {
   background-color: var(--action);
   color: var(--white);
   border: none;
-  padding: var(--x_small) var(--x_large);
+  padding: var(--small) var(--x_large);
 }
 
 .rnd-cor {
@@ -123,12 +123,37 @@ button {
 
 /* #region NAV */
 #nav {
-  justify-content: space-between;
+  /* box model */
   padding: var(--normal) 0;
+  /* layout */
+  justify-content: space-between;
   align-items: center;
 }
 
 #nav ul {
+  /* layout */
   gap: var(--large);
+}
+/* #endregion */
+
+/* #region HERO */
+#hero {
+  /* layout */
+  justify-content: space-between;
+  gap: var(--xx_large);
+  align-items: center;
+}
+
+#hero .text-container {
+  /* box model */
+  padding: var(--x_small) 0;
+
+  /* layout */
+  flex-basis: 450px;
+}
+
+#hero p {
+  /* box model */
+  margin-bottom: var(--small);
 }
 /* #endregion */
