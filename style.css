@@ -39,10 +39,14 @@ body {
 
   /* box-model */
   color: var(--white);
-  background-color: var(--blue); /* delete me ? */
+  background-color: var(--blue);
 }
 
 /* #region MODULAR TYPOGRAPHY */
+a {
+  color: inherit;
+}
+
 h1 {
   font-size: var(--xx_large);
 }
