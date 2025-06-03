@@ -1,191 +1,122 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* constants */
 :root {
-  --dark-blue: #1f2937;
-  --bright-white: #f9faf8;
-  --light-grey: #e5e7eb;
+  /* colours */
+  --blue: #1f2937;
+  --white: #f9faf8;
+  --grey: #e5e7eb;
   --action: #3882f6;
-  --small: 18px;
-  --medium: 24px;
-  --large: 36px;
-  --title: 48px;
+
+  /* sizes */
+  --x_small: 6px;
+  --small: 12px;
+  --normal: 18px;
+  --large: 24px;
+  --x_large: 36px;
+  --xx_large: 48px;
 }
 
-body {
-  /* ::typography:: */
-  font-family: Roboto;
-  font-size: var(--small);
-
-  /* ::box-model:: */
-  padding: 0;
-  margin: 0;
-  width: 100vw;
-}
-
-a {
-  /* ::typography:: */
+/* general reset */
+* {
+  /* typography */
   text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+  list-style-type: none;
 
-  /* ::box-model:: */
-  color: inherit;
+  /* box-model */
+  margin: 0;
+  padding: 0;
 }
 
-.flex-column {
-  /* ::layout:: */
-  display: flex;
-  flex-direction: column;
-}
+/* defaults */
+body {
+  /* typography */
+  font-family: roboto;
+  font-size: var(--normal);
+  line-height: calc(1 + 1 / 6);
 
-.flex-row {
-  /* ::layout:: */
-  display: flex;
-}
-
-.background {
-  /* ::box-model:: */
+  /* box-model */
   width: 100vw;
+  color: var(--white);
+  background-color: var(--blue); /* delete me ? */
 }
 
-.background > * {
-  /* ::box-model:: */
-  width: 960px;
+body > * {
+  /* box-model */
+  width: 1024px;
   margin: 0 auto;
 }
 
-.background.blue {
-  /* ::box-model:: */
-  color: var(--light-grey);
-  background-color: var(--dark-blue);
+/* #region TYPOGRAPHY */
+h1 {
+  font-size: var(--xx_large);
 }
 
-.background.white {
-  /* ::box-model:: */
-  color: var(--dark-blue);
-  background-color: var(--bright-white);
+h2,
+blockquote {
+  font-size: var(--x_large);
 }
 
-.background.grey {
-  /* ::box-model:: */
-  color: var(--dark-blue);
-  background-color: var(--light-grey);
-}
-
-header {
-  /* ::box-model:: */
-  padding: var(--small);
-
-  /* ::layout:: */
-  justify-content: space-between;
-}
-
-#logo {
-  /* ::typography:: */
-  font-size: var(--medium);
-
-  /* ::box-model:: */
-  color: var(--bright-white);
-}
-
-nav ul {
-  /* ::layout:: */
-  gap: var(--small);
-}
-
-nav ul,
-nav li {
-  /* ::typography:: */
-  list-style-type: none;
-
-  /* ::box-model:: */
-  padding: 0;
-  margin: 0;
-}
-
-#hero {
-  /* ::box-model:: */
-  margin: 96px auto;
-  height: 240px;
-
-  /* ::layout:: */
-  gap: var(--title);
-}
-
-#hero > * {
-  flex-basis: 50%;
-}
-
-#hero h1 {
-  /* ::typography:: */
-  font-size: var(--title);
-  font-weight: 900;
-
-  /* ::box-model:: */
-  color: var(--bright-white);
-}
-
-#hero .text-container {
-  /* ::layout:: */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-#hero .text-container * {
-  /* ::box-model:: */
-  padding: 0;
-  margin: 0;
-}
-
-#hero img {
-  /* ::box-model:: */
-  object-fit: contain;
-}
-
-#hero button {
-  /* ::box-model:: */
-  background-color: var(--action);
-  color: var(--bright-white);
-  border: none;
-  width: 120px;
-  height: var(--large);
-  border-radius: 6px;
-}
-
-#info {
-  /* ::box-model:: */
-  margin-bottom: 96px;
-}
-
-#info h2 {
-  /* ::typography:: */
-  text-align: center;
+.text.large {
   font-size: var(--large);
 }
 
-#info .card-container {
-  /* ::box-model:: */
-  margin: 0 96px;
-
-  /* ::layout:: */
-  gap: var(--medium);
+.text.dark {
+  color: var(--blue);
 }
 
-#info .card .img {
-  /* ::box-model:: */
-  border: solid var(--action) 6px;
-  border-radius: 18px;
-  aspect-ratio: 1 / 1;
+.text.low-contrast {
+  color: var(--grey);
 }
 
-#info .card p {
-  /* ::typography:: */
+.text.centred {
   text-align: center;
 }
 
-footer {
-  /* ::typography:: */
-  text-align: center;
-
-  /* ::box-model:: */
-  padding: var(--small);
+.text.bold {
+  font-weight: 900;
 }
+
+.text.italic {
+  font-weight: light;
+  font-style: italic;
+}
+/* #endregion */
+
+/* #region BOX-MODEL */
+button {
+  /* display: block; */
+  background-color: var(--action);
+  color: var(--white);
+  border: none;
+  padding: var(--x_small) var(--x_large);
+}
+
+.rnd-cor {
+  border-radius: var(--x_small);
+}
+
+.lrg-vert-pad {
+  padding: 100px 0;
+}
+
+.border {
+  border: var(--action) solid 4px;
+}
+
+.border.white {
+  border-color: var(--white);
+}
+/* #endregion */
+
+/* #region LAYOUT */
+.flex {
+  display: flex;
+}
+
+.flex.column {
+  flex-direction: column;
+}
+/* #endregion */
