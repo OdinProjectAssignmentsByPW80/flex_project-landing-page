@@ -230,3 +230,7 @@ button {
   align-items: center;
 }
 /* #endregion */
+
+footer {
+  padding: var(--xx_large) 0;
+}
