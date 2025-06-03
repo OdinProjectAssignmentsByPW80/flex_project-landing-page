@@ -49,7 +49,7 @@ body > * {
   margin: 0 auto;
 }
 
-/* #region TYPOGRAPHY */
+/* #region MODULAR TYPOGRAPHY */
 h1 {
   font-size: var(--xx_large);
 }
@@ -85,7 +85,7 @@ blockquote {
 }
 /* #endregion */
 
-/* #region BOX-MODEL */
+/* #region MODULAR BOX-MODEL */
 button {
   /* display: block; */
   background-color: var(--action);
@@ -111,12 +111,24 @@ button {
 }
 /* #endregion */
 
-/* #region LAYOUT */
+/* #region MODULAR LAYOUT */
 .flex {
   display: flex;
 }
 
 .flex.column {
   flex-direction: column;
+}
+/* #endregion */
+
+/* #region NAV */
+#nav {
+  justify-content: space-between;
+  padding: var(--normal) 0;
+  align-items: center;
+}
+
+#nav ul {
+  gap: var(--large);
 }
 /* #endregion */
